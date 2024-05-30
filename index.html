@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBD KUB</title>
+    <link rel="stylesheet" href="name.css">
+    <style>
+        body {
+    background-image: url('welcome.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    width: 100vw;
+    height: 100vh;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="nameForm">
+            <label for="name">BRO,Who are you?</label>
+            <input type="text" id="name" name="name" required>
+            <button type="submit">Enter</button>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById("nameForm").onsubmit = function(event) {
+            event.preventDefault(); // Prevent default form submission
+            var name = document.getElementById("name").value;
+            if(name.toLowerCase() === "nimon") {
+                window.location.assign("hi.html");
+            } else {
+                alert("Nah! Wrong!");
+            }
+        };
+
+    </script>
+</body>
+</html>
